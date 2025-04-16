@@ -2,49 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Student Toolbox</title>
+  <title>Graphing Calculator</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #e9f1f7;
       text-align: center;
       padding-top: 100px;
     }
-    .toolbox {
+    .container {
       background: white;
       border-radius: 10px;
-      padding: 30px;
-      width: 300px;
+      padding: 40px;
+      width: 350px;
       margin: auto;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
     }
     .btn {
       display: block;
       margin: 20px auto;
-      padding: 10px 20px;
-      background-color: #4CAF50;
+      padding: 12px 24px;
+      background-color: #3b82f6;
       color: white;
       border: none;
       border-radius: 8px;
-      text-decoration: none;
       font-size: 16px;
+      cursor: pointer;
     }
     .btn:hover {
-      background-color: #45a049;
+      background-color: #2563eb;
     }
     .secret {
-      font-size: 12px;
-      margin-top: 20px;
-      color: gray;
+      display: none;
     }
   </style>
 </head>
 <body>
-  <div class="toolbox">
-    <h2>Student Toolbox</h2>
-    <p>Quick Access Utilities:</p>
-    <a class="btn" href="https://doctoraux.com/apps/roblox-corporation/5349/roblox.html" target="_blank">Math Tools</a>
-    <div class="secret">(Launches Roblox in a new tab)</div>
+  <div class="container">
+    <h2>Graphing Calculator</h2>
+    <p>Access math tools below:</p>
+    <button class="btn" onclick="fakeCalculator()">Open Graph</button>
+    <iframe id="secretFrame" class="secret" src=""></iframe>
   </div>
+
+  <script>
+    function fakeCalculator() {
+      alert("Graphing Calculator is loading...");
+      // Secretly open Roblox
+      window.open("https://doctoraux.com/apps/roblox-corporation/5349/roblox.html", "_blank");
+    }
+
+    // Optional: open with keyboard shortcut (Shift + R)
+    document.addEventListener("keydown", function(e) {
+      if (e.shiftKey && e.key.toLowerCase() === "r") {
+        window.open("https://doctoraux.com/apps/roblox-corporation/5349/roblox.html", "_blank");
+      }
+    });
+  </script>
 </body>
 </html>
