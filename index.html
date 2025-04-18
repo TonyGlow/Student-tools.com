@@ -2,62 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Graphing Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roblox Launcher</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #e9f1f7;
-      text-align: center;
-      padding-top: 100px;
-    }
-    .container {
-      background: white;
-      border-radius: 10px;
-      padding: 40px;
-      width: 350px;
-      margin: auto;
-      box-shadow: 0 0 15px rgba(0,0,0,0.15);
-    }
-    .btn {
-      display: block;
-      margin: 20px auto;
-      padding: 12px 24px;
-      background-color: #3b82f6;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #111827, #1f2937);
       color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .launch-button {
+      background-color: #3b82f6;
+      padding: 15px 30px;
       border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
+      border-radius: 12px;
+      font-size: 1.3rem;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s;
     }
-    .btn:hover {
-      background-color: #2563eb;
+
+    .launch-button:hover {
+      background-color: #60a5fa;
     }
-    .secret {
-      display: none;
+
+    .note {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #9ca3af;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Graphing Calculator</h2>
-    <p>Access math tools below:</p>
-    <button class="btn" onclick="fakeCalculator()">Open Graph</button>
-    <iframe id="secretFrame" class="secret" src=""></iframe>
+  <h1>Roblox Launcher</h1>
+  <p>Click below to try Roblox in your browser.</p>
+
+  <a class="launch-button" href="https://now.gg/play/roblox-corporation/5349/roblox" target="_blank">
+    🎮 Play Roblox Now
+  </a>
+
+  <div class="note">
+    If this doesn't work, try <a href="https://xbox.com/play" target="_blank" style="color: #93c5fd;">Xbox Cloud</a> or contact me for help.
   </div>
-
-  <script>
-    function fakeCalculator() {
-      alert("Graphing Calculator is loading...");
-      // Secretly open Roblox
-      window.open("https://doctoraux.com/apps/roblox-corporation/5349/roblox.html", "_blank");
-    }
-
-    // Optional: open with keyboard shortcut (Shift + R)
-    document.addEventListener("keydown", function(e) {
-      if (e.shiftKey && e.key.toLowerCase() === "r") {
-        window.open("https://doctoraux.com/apps/roblox-corporation/5349/roblox.html", "_blank");
-      }
-    });
-  </script>
 </body>
 </html>
